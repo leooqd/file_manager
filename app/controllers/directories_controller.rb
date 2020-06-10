@@ -1,10 +1,15 @@
 # frozen_string_literal: true
 
 class DirectoriesController < ApplicationController
-  before_action :set_directory, only: %i[show]
+  before_action :set_directory, only: %i[show update delete_file]
   before_action :set_breadcrumbs, only: %i[show]
 
   def show; end
+
+  def update
+    @directory.files.attach(params[:files])
+    redirect_to request.referrer, notice: 'Atualizado!'
+  end
 
   def new
     @directory = Directory.new
@@ -20,6 +25,12 @@ class DirectoriesController < ApplicationController
         format.js
       end
     end
+  end
+
+  def delete_file
+    @directory.files.find(params[:file_id]).purge
+
+    redirect_to request.referrer, notice: 'Arquivo deletado!'
   end
 
   private
