@@ -1,0 +1,5 @@
+<% if @directory.errors.any? %>
+	<% @directory.errors.full_messages.each do |msg| %>
+		M.toast({html: '<%= msg %>', classes: 'red'});
+	<% end %>
+<% end %>
