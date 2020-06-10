@@ -1,18 +1,11 @@
 <div class="card">
-	<div class="card-content">
+	<div class="card-content scroll-fix">
 		<div class="row">
-			<% directories.each do |dir| %>
-				<div class="col s12 m4 l2">
-					<%= link_to directory_path(dir) do %>
-						<div class="directory">
-							<i class="material-icons large amber-text">folder</i>
-							<p class="name truncate">
-								<span class="grey-text"><%= dir.name %></span>
-							</p>
-						</div>
-					<% end %>
-				</div>
-			<% end %>
+			<%= render "dir_content" %>
+			<%= render "files_content" if @directory.present? %>
 		</div>
+	</div>
+	<div class="card-action">
+		<%= render "upload" if @directory.present? %>
 	</div>
 </div>

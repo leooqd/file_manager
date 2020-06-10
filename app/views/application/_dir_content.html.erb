@@ -1,0 +1,12 @@
+<% directories.each do |dir| %>
+	<div class="col s6 m4 l1">
+		<%= link_to directory_path(dir) do %>
+			<div class="directory">
+				<img src="/icons/folder.png" alt="" class="img-fluid">
+				<p class="name truncate">
+					<span class="grey-text"><%= dir.name %></span>
+				</p>
+			</div>
+		<% end %>
+	</div>
+<% end %>

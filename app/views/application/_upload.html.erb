@@ -1,0 +1,6 @@
+<%= form_for @directory, remote: true, html: { class: "dropzone", :id => "my-awesome-dropzone" } do |f| %>
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	<div class="fallback">
+		<%= f.file_field :files, name: "files", multiple: true %>
+	</div>
+<% end %>

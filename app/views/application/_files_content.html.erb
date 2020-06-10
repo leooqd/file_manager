@@ -1,0 +1,15 @@
+<% @directory.files.each do |file| %>
+	<div class="col s6 m4 l1">
+		<div class="directory">
+			<%= link_to directories_delete_file_path(slug: @directory.slug, file_id: file.id), method: :post, class: "remove btn btn-floating", data: {confirm: "Você tem certeza?"} do %>
+				<i class='material-icons red-text'>close</i>
+			<% end %>
+			<%= link_to url_for(file), target: "_blank" do %>
+				<img src="/icons/<%= file_extension(file) %>.png" alt="" class="img-fluid">
+				<p class="name truncate">
+					<span class="grey-text"><%= file.filename %></span>
+				</p>
+			<% end %>
+		</div>
+	</div>
+<% end %>
