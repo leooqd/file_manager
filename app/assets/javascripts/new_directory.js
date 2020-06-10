@@ -9,6 +9,8 @@ function new_directory(directory_id) {
     success: function(data) {
       $('#modal').modal("open");
       $('#modal').prepend("<h5 class='white-text center-align title'>Novo Diretório</h5>");
+      $("#directory_name").focus();
     }
   });
 }
+

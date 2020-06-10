@@ -18,11 +18,38 @@ nav{
 }
 
 .directory{
+	max-width: 100px;
+	max-height: 100px;
 	i{
 		margin-bottom: 0;
 		padding-bottom: 0;
 	}
-	p.name{
-		margin: -15px 0 0 10px;
+	a.remove{
+		position: absolute;
+		background-color: white;
 	}
+	p.name{
+		z-index: 1;
+		text-align: center;
+	}
+	img{
+		border-radius: 10px;
+		max-height: 70px;
+		width: auto;
+	}
+}
+
+
+form#my-awesome-dropzone.dropzone{
+	border: 2px dashed #2196f3;
+	.dz-message{
+		font-size: 20px;
+		color: #999;
+		font-style: italic;
+	}
+}
+
+.scroll-fix{
+	max-height: 400px;
+	overflow-y: scroll;
 }
