@@ -6,6 +6,8 @@ class Directory < ApplicationRecord
 
   belongs_to :directory, optional: true
   has_many :directories, dependent: :destroy
+  
+  has_many_attached :files, dependent: :destroy
 
   before_validation :set_slug
 
