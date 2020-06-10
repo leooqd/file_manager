@@ -1,4 +1,28 @@
+$c_blue: #2196f3;
+
 *{
 	margin: 0;
 	padding: 0;
+}
+
+nav{
+	background-color: $c_blue;
+}
+
+#modal{
+	background-color: $c_blue;
+
+	.title{
+		text-shadow: 0 0 5px rgba(255, 255, 255, .6);
+	}
+}
+
+.directory{
+	i{
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	p.name{
+		margin: -15px 0 0 10px;
+	}
 }

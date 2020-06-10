@@ -1,0 +1,5 @@
+<a href="/" class="breadcrumb">Home</a>
+
+<% breadcrumbs.each do |name, url| %>
+	<a href="<%= url %>" class="breadcrumb"><%= name %></a>
+<% end %>
