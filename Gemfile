@@ -19,6 +19,7 @@ gem 'material_icons'
 gem 'jquery-rails'
 gem "animate-rails"
 gem 'burgundy'
+gem 'dropzonejs-rails'
 # === ======= ===
 
 
