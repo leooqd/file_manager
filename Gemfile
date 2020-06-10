@@ -35,6 +35,7 @@ group :development, :test do
   gem "better_errors"
   gem 'rspec-rails', '~> 3.5'
   gem "factory_bot_rails"
+  gem "rubocop"
 end
 
 group :development do
